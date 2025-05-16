@@ -7,8 +7,6 @@ if (/^https:\/\/app\.bilibili\.com\/x\/v2\/splash\/list.test(url)) {
         obj.data.show = [];
         obj.data.list = [];
         obj.data.max_time = 0;
-        obj.data.min_interval = 999999;
-        obj.data.pull_interval = 999999;
     }
     body = JSON.stringify(obj);
 }
