@@ -1,7 +1,6 @@
 hostname = grpc.biliapi.net,api.bilibili.com,app.bilibili.com
 
-[Rewrite]
-^https:\/\/(app|api)\.bilibili\.com\/(x\/v2\/splash\/show|pgc\/activity\/deliver\/material\/receive|x\/vip\/ads|pgc\/season\/player\/(ogv\/)?cards) reject-200
+^https:\/\/(app|api)\.bilibili\.com\/x\/(v2\/splash\/show|vip\/ads) url reject-200
 ^https:\/\/app\.bilibili\.com\/x\/v2\/account\/(mine|ipad) url script-response-body https://github.com/z-jinke/quantumult/raw/refs/heads/main/js/bilibili.js
 ^https:\/\/app\.bilibili\.com\/x\/resource\/show\/tab url script-response-body https://github.com/z-jinke/quantumult/raw/refs/heads/main/js/bilibili.js
 ^https:\/\/app\.bilibili\.com\/x\/v2\/search\/square url script-response-body https://github.com/z-jinke/quantumult/raw/refs/heads/main/js/bilibili.js
