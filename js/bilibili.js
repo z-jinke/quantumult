@@ -1,7 +1,7 @@
 let url = $request.url;
 let body = $response.body;
 
-if (/^https:\/\/app\.bilibili\.com\/x\/v2\/splash/.test(url)) {
+if (/^https:\/\/app\.bilibili\.com\/x\/v2\/splash\/list.test(url)) {
     let obj = JSON.parse(body);
     if (obj.data) {
         obj.data.show = [];
