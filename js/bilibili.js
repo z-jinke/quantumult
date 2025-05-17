@@ -4,20 +4,15 @@ let body = $response.body;
 if (/^https:\/\/app\.bilibili\.com\/x\/v2\/splash\/list/.test(url)) {
     let obj = JSON.parse(body);
     if (obj.data) {
-        obj.data.show = [];
-        obj.data.list = [];
-        obj.data.max_time = 0;
-    }
+        obj.data.list.forEach(item => item.duration = 0);
+    } 
     body = JSON.stringify(obj);
 }
 
 if (/^https:\/\/app\.bilibili\.com\/x\/v2\/feed\/index/.test(url)) {
     let obj = JSON.parse(body);
     if (obj.data) {
-        obj.data.items = obj.data.items.filter(item => {
-            const type = item.goto || item.card_goto;
-            return type === "av";
-        });
+        obj.data.items = obj.data.items.filter(item => item.goto === "av" && item.card_goto === "av");
     }
     body = JSON.stringify(obj);
 }
