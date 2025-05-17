@@ -1,4 +1,4 @@
 hostname = youtubei.googleapis.com,*.googlevideo.com
 
 ^https:\/\/[\w-]+\.googlevideo\.com\/(?!(dclk_video_ads|videoplayback\?)).+&oad url reject-200
-^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|guide|get_watch) url script-response-body https://raw.githubusercontent.com/Maasea/sgmodule/refs/heads/master/Script/Youtube/youtube.response.js
+^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|search|next|guide|get_watch) url script-response-body https://raw.githubusercontent.com/Maasea/sgmodule/refs/heads/master/Script/Youtube/youtube.response.js
