@@ -1,5 +1,5 @@
 hostname = *.wg.spotify.com
 
 ^https:\/\/spclient\.wg\.spotify\.com\/user-customization-service\/v1\/customize$ url request-header If-None-Match request-header *
-^https:\/\/spclient\.wg\.spotify\.com\/bootstrap\/v1\/bootstrap url script-response-body https://raw.githubusercontent.com/app2smile/rules/refs/heads/master/js/spotify-proto.js
-^https:\/\/spclient\.wg\.spotify\.com\/user-customization-service\/v1\/customize url script-response-body https://raw.githubusercontent.com/app2smile/rules/refs/heads/master/js/spotify-proto.js
+^https:\/\/spclient\.wg\.spotify\.com\/bootstrap\/v1\/bootstrap url script-response-body https://github.com/z-jinke/quantumult/raw/refs/heads/main/js/spotify.js
+^https:\/\/spclient\.wg\.spotify\.com\/user-customization-service\/v1\/customize url script-response-body https://github.com/z-jinke/quantumult/raw/refs/heads/main/js/spotify.js
