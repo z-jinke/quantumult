@@ -1,11 +1,13 @@
 /** 
-oji=1/-1  添加 / 删除国旗 
-udp=1/-1  强制开启 / 关闭 
-tfo=1/-1  开启 / 关闭
-in=  保留 参数多个 + 连接
-out=  排除 参数多个 + 连接
-delreg=  正则删除节点名字段
-rename=  重命名参数：旧@新
+oji=1/-1      添加 / 删除
+udp=1/-1      开启 / 关闭 
+tfo=1/-1      开启 / 关闭
+in=           保留 参数多个 + 连接
+out=          排除 参数多个 + 连接
+delreg=       正则删除节点名字段
+rename=       重命名参数：旧@新
+
+节点名称修改不同参数用&连接
 */
 
 let [link0, content0, subinfo] = [$resource.link, $resource.content, $resource.info]
