@@ -1,0 +1,3 @@
+hostname = *.aidimension.cn
+
+^https:\/\/api\.aidimension\.cn\/shop\/subscription\/apple\/purchases url script-response-body https://github.com/z-jinke/quantumult/raw/refs/heads/main/js/picsart.js
