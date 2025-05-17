@@ -4,8 +4,12 @@ let body = $response.body;
 if (/^https:\/\/app\.bilibili\.com\/x\/v2\/splash\/list/.test(url)) {
     let obj = JSON.parse(body);
     if (obj.data) {
-        obj.data.list.forEach(item => item.duration = 0);
-    } 
+        obj.data.list.forEach(item => {
+            item.duration = 0;
+            item.begin_time = 1893427200;
+            item.end_time = 1893427200;
+        });
+    }
     body = JSON.stringify(obj);
 }
 
