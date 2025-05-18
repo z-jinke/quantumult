@@ -29,11 +29,14 @@ if (/^https:\/\/app\.bilibili\.com\/x\/v2\/search\/square/.test(url)) {
     body = JSON.stringify(obj);
 }
 
-if (/^https:\/\/api\.bilibili\.com\/pgc\/page\/(bangumi|cinema\/tab)/.test(url)) {
+if (/^https:\/\/api\.bilibili\.com\/pgc\/page\/(bangumi|cinema\/tab|channel)/.test(url)) {
     let obj = JSON.parse(body);
 
     if (obj.result) {
         obj.result.modules = obj.result.modules.filter(mod => mod.module_id !== 1639 && mod.module_id !== 1633);
+    }
+    if (obj.data) {
+        obj.data.modules = obj.data.modules.filter(mod => mod.id !== 2015 && mod.id !== 2038);
     }
     body = JSON.stringify(obj);
 }
