@@ -29,6 +29,18 @@ if (/^https:\/\/app\.bilibili\.com\/x\/v2\/search\/square/.test(url)) {
     body = JSON.stringify(obj);
 }
 
+if (/^https:\/\/api\.bilibili\.com\/pgc\/page\//.test(url)) {
+    let obj = JSON.parse(body);
+    if (obj.result) {
+        if (url.endsWith("/bangumi")) {
+            obj.result.modules = obj.result.modules.filter(mod => mod.module_id !== 1639);
+        } else if (url.endsWith("/cinema/tab")) {
+            obj.result.modules = obj.result.modules.filter(mod => mod.module_id !== 1633);
+        }
+    }
+    body = JSON.stringify(obj);
+}
+
 if (/^https:\/\/app\.bilibili\.com\/x\/resource\/show\/tab\/v2/.test(url)) {
     let obj = JSON.parse(body);
     if (obj.data) {
