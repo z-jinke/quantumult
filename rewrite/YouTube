@@ -8,3 +8,5 @@ hostname = *.googleapis.com,*.googlevideo.com
 ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/get_watch url script-response-body https://raw.githubusercontent.com/Maasea/sgmodule/refs/heads/master/Script/Youtube/youtube.response.js
 ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/account url script-response-body https://raw.githubusercontent.com/Maasea/sgmodule/refs/heads/master/Script/Youtube/youtube.response.js
 ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/player url script-response-body https://raw.githubusercontent.com/Maasea/sgmodule/refs/heads/master/Script/Youtube/youtube.response.js
+^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/reel_watch_sequence url script-response-body https://raw.githubusercontent.com/Maasea/sgmodule/refs/heads/master/Script/Youtube/youtube.response.js
+^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/get_setting url script-response-body https://raw.githubusercontent.com/Maasea/sgmodule/refs/heads/master/Script/Youtube/youtube.response.js
