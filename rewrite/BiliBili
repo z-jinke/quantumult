@@ -1,9 +1,10 @@
 hostname = *.biliapi.net,*.bilibili.com
 
-^https:\/\/api\.bilibili\.com\/x\/vip\/ads url reject-200
 ^https:\/\/app\.bilibili\.com\/x\/v2\/splash\/show url reject-200
 ^https:\/\/api\.bilibili\.com\/x\/emote\/user\/panel url reject-200
-^https:\/\/api\.live\.bilibili\.com\/xlive\/app-interface\/v2\/index\/feed url script-response-body https://github.com/z-jinke/quantumult/raw/refs/heads/main/js/bilibili.js
+^https:\/\/api\.bilibili\.com\/x\/vip\/ads url reject-200
+^https:\/\/api\.bilibili\.com\/pgc\/season\/player\/ogv\/cards url reject-200
+^https:\/\/api\.bilibili\.com\/pgc\/activity\/deliver\/material\/receive url reject-200
 ^https:\/\/api\.bilibili\.com\/pgc\/page\/(bangumi|cinema\/tab|channel) url script-response-body https://github.com/z-jinke/quantumult/raw/refs/heads/main/js/bilibili.js
 ^https:\/\/app\.bilibili\.com\/x\/v2\/account\/(mine|ipad) url script-response-body https://github.com/z-jinke/quantumult/raw/refs/heads/main/js/bilibili.js
 ^https:\/\/app\.bilibili\.com\/x\/resource\/show\/tab url script-response-body https://github.com/z-jinke/quantumult/raw/refs/heads/main/js/bilibili.js
