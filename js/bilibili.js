@@ -31,20 +31,11 @@ if (/^https:\/\/app\.bilibili\.com\/x\/v2\/search\/square/.test(url)) {
 
 if (/^https:\/\/api\.bilibili\.com\/pgc\/page\/(bangumi|cinema\/tab|channel)/.test(url)) {
     let obj = JSON.parse(body);
-
     if (obj.result) {
         obj.result.modules = obj.result.modules.filter(mod => mod.module_id !== 1639 && mod.module_id !== 1633);
     }
     if (obj.data) {
         obj.data.modules = obj.data.modules.filter(mod => mod.id !== 2015 && mod.id !== 2038);
-    }
-    body = JSON.stringify(obj);
-}
-
-if (/^https:\/\/api\.live\.bilibili\.com\/xlive\/app-interface\/v2\/index\/feed/.test(url)) {
-    let obj = JSON.parse(body);
-    if (obj.data) {
-        obj.data.card_list.forEach(i => i.card_type === "my_idol_v1" && delete i.card_data.my_idol_v1.list);
     }
     body = JSON.stringify(obj);
 }
