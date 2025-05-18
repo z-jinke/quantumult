@@ -41,6 +41,14 @@ if (/^https:\/\/api\.bilibili\.com\/pgc\/page\/(bangumi|cinema\/tab|channel)/.te
     body = JSON.stringify(obj);
 }
 
+if (/^https:\/\/api\.live\.bilibili\.com\/xlive\/app-interface\/v2\/index\/feed/.test(url)) {
+    let obj = JSON.parse(body);
+    if (obj.data) {
+        obj.data.card_list.forEach(i => i.card_type === "my_idol_v1" && delete i.card_data.my_idol_v1.list);
+    }
+    body = JSON.stringify(obj);
+}
+
 if (/^https:\/\/app\.bilibili\.com\/x\/resource\/show\/tab\/v2/.test(url)) {
     let obj = JSON.parse(body);
     if (obj.data) {
