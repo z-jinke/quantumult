@@ -40,6 +40,15 @@ if (/^https:\/\/api\.bilibili\.com\/pgc\/page\/(bangumi|cinema\/tab|channel)/.te
     body = JSON.stringify(obj);
 }
 
+if (/^https:\/\/app\.bilibili\.com\/x\/v2\/account\/myinfo\?/.test(url)) {
+    let obj = JSON.parse(body);
+    obj.data.vip.status = 1;
+    obj.data.vip.type = 2;
+    obj.data.vip.role = 3;
+    obj.data.vip.due_date = 2524608000000;
+    body = JSON.stringify(obj);
+}
+
 if (/^https:\/\/app\.bilibili\.com\/x\/resource\/show\/tab\/v2/.test(url)) {
     let obj = JSON.parse(body);
     if (obj.data) {
